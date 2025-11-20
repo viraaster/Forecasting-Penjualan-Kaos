@@ -118,7 +118,7 @@ tab1, tab2, tab3 = st.tabs(["1. Dataset Historis", "2. Grafik Historis", "3. Has
 with tab1:
     st.header(f"Dataset Historis ({selected_category})")
     st.write(f"Data historis telah diubah menjadi format bulanan (Monthly Time Series).")
-    st.dataframe(series.to_frame().tail(24).rename(columns={selected_category: "Unit Penjualan"}), use_container_width=True) 
+    st.dataframe(series.to_frame().tail(24).rename(columns={selected_category: "Unit Penjualan"}), width='stretch') 
     
     st.subheader("Informasi Data")
     # Bagian Periode dan Jumlah Data
@@ -211,7 +211,7 @@ with tab3:
         forecast_df['Bulan'] = forecast_df['Bulan'].dt.strftime('%Y-%m-%d')
         
         st.subheader("Data Hasil Forecast")
-        st.dataframe(forecast_df, hide_index=True, use_container_width=True)
+        st.dataframe(forecast_df, hide_index=True, width='stretch')
         
         # --- Tambahkan Download Button ---
         csv = forecast_df.to_csv(index=False).encode('utf-8')
@@ -225,3 +225,4 @@ with tab3:
     else:
 
         st.info("Pilih kategori di sidebar dan tekan tombol 'Jalankan Forecasting' untuk melihat hasilnya.")
+
