@@ -3,6 +3,4 @@ pandas
 numpy
 matplotlib
 statsmodels
-plotly
 Pillow
-joblib
