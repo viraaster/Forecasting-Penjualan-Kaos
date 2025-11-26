@@ -17,8 +17,8 @@ st.set_page_config(
 image_banner = Image.open('ds.png')  # Replace with your image file
 st.image(image_banner, width='stretch')
 
-st.title("📈Forecasting Penjualan Kaos")
-st.write("Menggunakan metode Triple Exponential Smoothing (Holt-Winters) untuk memprediksi penjualan kaos pada toko Kaosdisablon")
+st.title("Forecasting Penjualan Kaos")
+st.write("Menggunakan metode Triple Exponential Smoothing (Holt-Winters) untuk peramalan penjualan kaos pada toko Kaosdisablon")
 
 # Pemetaan file csv
 FILE_MAP = {
@@ -225,4 +225,5 @@ with tab3:
     else:
 
         st.info("Pilih kategori di sidebar dan tekan tombol 'Jalankan Forecasting' untuk melihat hasilnya.")
+
 
